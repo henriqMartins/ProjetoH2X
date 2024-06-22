@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    background-color: #ececec;
+    min-height: 100vh;
+    width: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+.header {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1px 200px;
+    background-color: #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #06774B;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    transition: .5s;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    position: relative;
+    font-size: 20px;
+    color: #06774B;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #047223;
+    transition: .5s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* tela inicial */
+
+.telainicio {
+    display: flex;
+    background-image: url(luca-bravo-Fsw4uEDuQTY-unsplash.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    box-shadow: 5px 2px 10px #000000;
+}
+
+.imagem {
+    display: flex;
+    position: relative;
+    width: 1300px;
+    animation-delay: 1.5s; 
+}
+
+span {
+    color: #000000;
+}
+
+/* ANIMAÇÕES */
+
+.anim {
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(30px);
+    }
+}
+
+/* Seção */
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 100px; 
+    padding-top: 100px; /* Cria espaço para centralizar a seção na visualização */
+}
+
+/*  SOBRE */
+
+.boxsobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 150px auto; 
+    height: 500px;
+    width: 1500px;
+}
+
+.boxsobre h1 {
+    font-weight: 550;
+    font-size: 50px;
+    color: #06774B;
+    padding: 20px 20px;
+    line-height: 60px;
+}
+
+
+/* NOSSO SERVIÇO */
+
+.boxservico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 100px auto; 
+    height: 800px;
+    width: 100%;
+    background-color: #06774B;
+    box-shadow: 1px 3px 20px #000000;
+}
+
+.boxservico h1 {
+    font-weight: 550;
+    font-size: 50px;
+    color: #ececec;
+    text-shadow: 1px 1px 10px #000000dc;
+    padding: 50px 20px;
+    line-height: 60px;
+}
+
+/* CONTATO */
+
+.box {
+    position: relative;
+    scroll-margin-top: 50px; 
+    margin: 150px auto;
+    bottom: 10px;
+    width: 500px; 
+    height: 500px; 
+    background-color: #06774B;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 50px #33333393;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.box h1{
+    font-family: "Ubuntu", sans-serif;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #ececec;
+    
+}
+
+.email{
+    flex-direction: column;
+    position: relative;
+    top: 70px;
+    padding: 45px 20px;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    color: #ececec;
+    transition: .5s;
+}
+
+.email:hover{
+    transform: scale(1.1);
+}
+
+hr{ 
+    position: relative;
+    border: solid #ececec 2px;
+    top: 5px;
+    width: 300px;
+}
+
+/* RESPONSIVO DO SITE */
+
+@media screen and (max-width: 768px){
+
+    /* HEAEDER */
+
+    .header {
+        padding: 20px 10px;
+        background-color: #ececec;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* TELA DE INICIO */
+    
+    .imagem {
+        height: 400px;
+        width: 400px;
+        left: 35px;
+    }
+
+    .telainicio{
+        background-size: cover;
+        height: 750px;
+        width: 100%;
+    }
+    
+
+    /* SOBRE */
+
+    .boxsobre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto; 
+        height: 400px;
+        width: 100%;
+    }
+    
+    .boxsobre h1 {
+        font-weight: 550;
+        font-size: 26px;
+        padding: 0px 10px;
+        line-height: 30px;
+        width: 100%;
+    }
+    
+    /* NOSSO SERVIÇO */
+
+    .boxservico {
+        margin: 100px auto; 
+        bottom: 100px;
+        height: 300px;
+        width: 100%;
+        background-position: -130px 730px;
+        background-size: 750px;
+    }
+    
+    .boxservico h1 {
+        font-weight: 550;
+        font-size: 26px;
+        padding: 0px 10px;
+        line-height: 30px;
+        width: 100%;
+    }
+
+    /* CONTATO */
+    .box {
+        margin: 00px auto; 
+        margin: 0px auto; 
+        top: 0px;
+        
+    }
+
+    .email{
+        top: 80px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width: 1200px){
+
+    /* HEAEDER */
+
+    .header {
+        padding: 20px 10px;
+        background-color: #ececec;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 40px;
+    }
+
+    /* TELA DE INICIO */
+    
+    .imagem {
+        height: 700px;
+        width: 700px;
+        left: 70px;
+    }
+
+
+    .telainicio{
+        background-size: cover;
+        height: 1100px;
+        width: 100%;
+    }
+    
+    .telainicio h1 {
+        font-size: 15px;
+        top: 3px;
+        left: 460px;
+        line-height: 16px;
+    }
+
+    /* SOBRE */
+
+    .boxsobre {
+        margin: 00px auto; 
+        height: 400px;
+        width: 100%;
+        background-position: -130px 760px;
+        background-size: 100%;
+    }
+    
+    .boxsobre h1 {
+        font-weight: 550;
+        font-size: 36px;
+        padding: 10px 10px;
+        line-height: 40px;
+    }
+    
+    /* NOSSO SERVIÇO */
+
+    .boxservico {
+        margin: 200px auto; 
+        bottom: 80px;
+        height: 400px;
+        width: 100%;
+    }
+    
+    .boxservico h1 {
+        font-weight: 550;
+        font-size: 36px;
+        padding: 10px 40px;
+        line-height: 40px;
+        width: 100%;
+    }
+
+    .box {
+        margin: 200px auto; 
+        margin: 100px auto; 
+        bottom: 100px;
+    }
+
+    .email{
+        top: 80px;
+    }
+
+}
